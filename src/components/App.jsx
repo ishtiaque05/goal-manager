@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import {firebaseApp} from '../firebase';
 import { connect } from 'react-redux';
+import AddGoal from './AddGoal';
 class App extends Component {
   signOut(){
     firebaseApp.auth().signOut();
   }
   render(){
     return(
-      <div>App
+      <div>
+        <div>
+          <h3>Goals</h3>
+          <AddGoal />
+          <div>Goal list</div>
+        </div>
         <button
           className="btn btn-danger"
           onClick={() => this.signOut()}
