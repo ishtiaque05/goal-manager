@@ -6,5 +6,9 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 
 ReactDOM.render(
-  <Router path="/" history={browserHistory}> </Router>, document.getElementById('root')
+  <Router path="/" history={browserHistory}>
+    <Route path="/app" component={App}/>
+    <Route path="/signin" component={SignIn}/>
+    <Route path="/signup" component={SignUp}/>
+  </Router>, document.getElementById('root')
 )
